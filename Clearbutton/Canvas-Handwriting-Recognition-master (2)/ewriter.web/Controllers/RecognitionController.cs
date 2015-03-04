@@ -27,6 +27,7 @@ namespace eWriter.Web.Controllers
             if (analysisStatus.Successful)
             {
                 var recognizedString = inkAnalyzer.GetRecognizedString();
+				recognizedString = recognizedString.Replace(" ","");
                 HttpResponseMessage responseMessage = new HttpResponseMessage();
                 responseMessage.Content = new StringContent(recognizedString);
                 return responseMessage;
