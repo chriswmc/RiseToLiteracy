@@ -2,7 +2,7 @@ body {
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: #232323;
-    background-color: #fff;
+    background-color: grey;
 }
 
 header, footer, nav, section {
@@ -62,4 +62,7 @@ textarea {
 
 #myCanvas {
     outline: 2px solid black;
+}
+#container {
+	background-color: white;
 }
