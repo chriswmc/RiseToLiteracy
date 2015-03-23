@@ -17,7 +17,7 @@
             surface: null,
 
             setup: function () {
-                var h = window.innerHeight * 0.5;
+                var h = window.innerHeight - 60;
                 var w = window.innerWidth - 20;
                 document.getElementById('container').setAttribute("style", "position:relative; height:" + h + "px; width:" + w + "px;"); // include any other desired style properties
 
@@ -43,7 +43,7 @@
                 var canvas = document.getElementById('lines');
                 var context = canvas.getContext('2d');
 
-                var c = 40; // cushion around the lines
+                var c = window.innerHeight * 0.05; // cushion around the lines
                 var lineHeight = 0;
                 if (window.innerHeight < 400) {
                     lineHeight = window.innerHeight * 0.4;
