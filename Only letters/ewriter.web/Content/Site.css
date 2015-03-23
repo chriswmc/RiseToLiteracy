@@ -92,7 +92,9 @@ textarea {
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #aade7c;
-    float:right;
+    	float:right;
+    	margin-top:10px;
+    	margin-right:10px;
 }
 .submitButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a));
@@ -134,6 +136,8 @@ textarea {
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
+	margin-top:10px;
+    	margin-left:10px;
 }
 .clearButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
