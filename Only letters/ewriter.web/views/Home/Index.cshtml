@@ -7,10 +7,8 @@
     <canvas id="myCanvas" style="position:absolute; z-index: 1;"></canvas>
 </div>
 <br />
-<button id="submitBtn">Submit</button>
-<button id="clearBtn">Clear</button>
-
-
+<button id="clearBtn" class="clearButton">Clear</button>
+<button id="submitBtn" class="submitButton">Submit</button>
 
 <script type="text/javascript">
     $(function () {
@@ -19,7 +17,7 @@
             surface: null,
 
             setup: function () {
-                var h = window.innerHeight * 0.75;
+                var h = window.innerHeight * 0.5;
                 var w = window.innerWidth - 20;
                 document.getElementById('container').setAttribute("style", "position:relative; height:" + h + "px; width:" + w + "px;"); // include any other desired style properties
 
@@ -46,7 +44,10 @@
                 var context = canvas.getContext('2d');
 
                 var c = 40; // cushion around the lines
-                var lineHeight = window.innerHeight * 0.4;
+                var lineHeight = 0;
+                if (window.innerHeight < 400) {
+                    lineHeight = window.innerHeight * 0.4;
+                }else{lineHeight = 150;}
 
                 context.beginPath();
                 context.moveTo(c, c); // x, y
